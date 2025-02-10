@@ -28,8 +28,8 @@ const flight = {
     technical_stops: 0,
     price: 36,
     bags_price: {
-      bag1: 34.95,
-      bag2: 69.91,
+      1: 34.95,
+      2: 69.91,
     },
     baglimit: {
       hand_width: 20,
@@ -66,7 +66,7 @@ const flight = {
 
   const kurzCZK = 30.17 ;
 
-  const cenaCZK = Math.ceil(flight.bags_price.bag2 * kurzCZK) ;
+  const cenaCZK = Math.ceil(flight.bags_price[2] * kurzCZK) ; //když jsou speciální znaky, přistupuje se k nim pomocí hranatých závorek (např. mezera, vykřičník, číslo atd.)
 
   document.body.innerHTML += '<p>Poplatek za druhé zavazadlo: ' + cenaCZK + ' Kč</p>'
   
